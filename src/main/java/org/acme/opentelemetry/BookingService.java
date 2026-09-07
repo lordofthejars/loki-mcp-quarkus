@@ -39,14 +39,12 @@ public class BookingService {
         String gate =
                 flight.getDepartureGate();
 
-        /*
-         * Intentional bug.
-         *
-         * The application assumes that every flight
-         * already has a departure gate.
-         *
-         * But gate assignment happens later.
-         */
+        if (gate == null) {
+            throw new IllegalStateException(
+                    "Cannot book flight " + flightId +
+                    ": departure gate has not been assigned yet"
+            );
+        }
 
         LOG.infof(
                 "Processing flight. flightId=%s gate=%s",
