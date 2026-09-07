@@ -1,0 +1,25 @@
+{
+    "mcpServers": {
+        "grafana-mode": {
+            "type": "streamable-http",
+            "url": "http://localhost:8000/mcp",
+            "disabled": false,
+            "alwaysAllow": [
+                "list_incidents",
+                "search_dashboards",
+                "list_datasources",
+                "list_prometheus_metric_names",
+                "list_prometheus_label_values",
+                "query_loki_logs",
+                "query_loki_label_values",
+                "query_loki_label_names",
+                "list_incidents",
+                "list_loki_label_names",
+                "query_loki_stats",
+                "generate_deeplink",
+                "get_panel_image",
+                "get_dashboard_panel_queries"
+            ]
+        }
+    }
+}
