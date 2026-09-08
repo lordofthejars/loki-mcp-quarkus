@@ -19,7 +19,7 @@ public class FlightRepository {
         Flight flight =
                 new Flight("IB123", "IB123");
 
-        // Intentionally no gate assignment
+        flight.setDepartureGate("A1");
 
         flights.put(
                 flight.getId(),
